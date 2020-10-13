@@ -1,0 +1,269 @@
+.blog {
+    margin: 90px 0 -140px;
+    
+
+    .blog__title {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 2.6px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $offers-color;  
+        text-align: center; 
+    }
+
+    .blog__block {
+        display: flex !important;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;     
+
+        .blog__element {
+            flex-basis: 25.5%;
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .blog__info {
+                width: calc(100% - 70px);
+                margin: 0 auto;
+                transform: translateY(-50%);
+                background-color: #fff;
+                padding: 15px 0;
+                text-align: center;
+                box-shadow:  0 0 10px rgba(0,0,0,0.5);
+
+                .topic {
+                    a {
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 18px;
+                        letter-spacing: 0.9px;
+                        text-decoration: none;
+                        color: $offers-color;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .blog__date {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #7d7d7d;
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        .owl-nav{
+            
+            button.owl-prev,  button.owl-next  {
+                background: url('../img/sprite-arrow2.png') 0 0 no-repeat;
+                width: 49px;
+                height: 49px;
+                position: absolute;
+                box-shadow: none;
+                border: none;
+                left: -55px;
+                top: calc(50% - 49px);
+                cursor: pointer;
+                transform: translateY(-50%);
+            }
+    
+            button.owl-prev {
+                
+                &:hover {
+                    background-position: 0 -49px;
+                }
+            }
+    
+            button.owl-next {
+                background-position: -49px 0;
+                left: auto;
+                right: -55px;
+    
+                &:hover {
+                    background-position: -49px -49px;
+                }
+            }
+        }
+        .owl-dots {
+            text-align: center;
+            padding: 0 0 15px 0;
+            margin: 0 auto;
+    
+            .owl-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background-color: rgb(163, 163, 163);
+                box-sizing: border-box;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+    
+            .active {
+                background-color: #000;
+            }
+        }
+
+       
+    }
+}
+
+
+
+
+@media (max-width: 1280px) {
+
+    .blog {
+       
+        .blog__block {
+
+            .owl-nav{
+            
+                button.owl-prev,  button.owl-next  {
+                    background: url('../img/sprite-arrow2.png') 0 0 no-repeat;
+                    width: 49px;
+                    height: 49px;
+                    position: absolute;
+                    box-shadow: none;
+                    border: none;
+                    left: -20px;
+                    top: calc(50% - 49px);
+                    cursor: pointer;
+                    transform: translateY(-50%);
+                }
+        
+                button.owl-prev {
+                    
+                    &:hover {
+                        background-position: 0 -49px;
+                    }
+                }
+        
+                button.owl-next {
+                    background-position: -49px 0;
+                    left: auto;
+                    right: -20px;
+        
+                    &:hover {
+                        background-position: -49px -49px;
+                    }
+                }
+            }
+
+            .blog__element {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .blog {
+       
+        .blog__block {
+
+            .owl-nav{
+            
+                button.owl-prev,  button.owl-next  {
+                    background: url('../img/sprite-arrow2.png') 0 0 no-repeat;
+                    width: 49px;
+                    height: 49px;
+                    position: absolute;
+                    box-shadow: none;
+                    border: none;
+                    left: 20px;
+                    top: calc(50% - 49px);
+                    cursor: pointer;
+                    transform: translateY(-50%);
+                }
+        
+                button.owl-prev {
+                    
+                    &:hover {
+                        background-position: 0 -49px;
+                    }
+                }
+        
+                button.owl-next {
+                    background-position: -49px 0;
+                    left: auto;
+                    right: 20px;
+        
+                    &:hover {
+                        background-position: -49px -49px;
+                    }
+                }
+            }
+
+            .blog__element {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 1120px) {
+
+    .blog {
+       
+       .owl-nav {
+           display: none;
+       }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .blog {
+        margin-top: 25px;
+
+        .owl-nav {
+            display: block;
+        }
+        .blog__block {
+
+            .blog__element {
+
+                .blog__info {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 580px) {
+
+    .blog {
+        margin-top: 25px;
+
+        .owl-nav {
+            display: block;
+        }
+        .blog__block {
+
+            .blog__element {
+
+                flex-basis: 100%;
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+              
+            }
+        }
+    }
+}

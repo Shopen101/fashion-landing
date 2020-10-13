@@ -1,0 +1,149 @@
+.featured {
+    margin: 90px 0;
+    .featured__title {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 2.6px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $offers-color;  
+        text-align: center; 
+    }
+
+    .featured__block {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        margin-top: 40px;
+
+        .featured__element {
+            flex-basis: 23%;
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto 20px;
+
+                
+            }
+            p {
+                font-size: 15px;
+                line-height: 17px;
+                margin: 7px 0;
+
+                a {
+                    font-size: 15px;
+                    line-height: 17px;
+                    text-decoration: none;
+                    color: #000;
+                    font-weight: 700;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .featured__brand {
+                color: $brand-color;
+            }
+            .featured__price {
+                font-weight: 700;
+
+                span {
+                    font-weight: 400;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .featured__btn {
+        $values: (fs: 12px, lh: 20px, ls: 0.6px, w: 175px, br: 60px, bg: transparent, clr: $black);
+        @include btn($values...);
+        border: 2px solid #d9c8aa;
+        margin: 50px auto;
+        padding: 18px 0;
+
+        &:hover {
+            transform: translateY(-3px);
+            transition-duration: 0.4s;
+        }
+    }
+    .owl-nav{
+            
+        button.owl-prev,  button.owl-next  {
+            background: url('../img/sprite-arrow2.png') 0 0 no-repeat;
+            width: 49px;
+            height: 49px;
+            position: absolute;
+            box-shadow: none;
+            border: none;
+            left: -55px;
+            top: calc(50% - 49px);
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        button.owl-prev {
+            
+            &:hover {
+                background-position: 0 -49px;
+            }
+        }
+
+        button.owl-next {
+            background-position: -49px 0;
+            left: auto;
+            right: -55px;
+
+            &:hover {
+                background-position: -49px -49px;
+            }
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        padding: 0 0 15px 0;
+        margin: 0 auto;
+
+        .owl-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background-color: rgb(163, 163, 163);
+            box-sizing: border-box;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #000;
+        }
+    }
+    
+    
+}
+
+@media (max-width: 1300px) {
+    .featured {
+        width: calc(100% - 100px);
+        margin: 90px auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .featured {
+        margin: 25px auto -10px;
+    }
+}
+
+@media(max-width: 480px) {
+    .owl-nav {
+        display: block;
+    }
+}
